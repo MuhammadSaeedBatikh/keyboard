@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: org.comtel2000:fx-onscreen-keyboard-swing:8.2.6-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/comtel2000/fx-onscreen-keyboard-swing/8.2.6-SNAPSHOT/fx-onscreen-keyboard-swing-8.2.6-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/fx-experience/fx-onscreen-keyboard-swing/fx-onscreen-keyboard-swing-8.2.6-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/comtel2000/fx-onscreen-keyboard-swing/8.2.6-SNAPSHOT/fx-onscreen-keyboard-swing-8.2.6-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/fx-experience/fx-onscreen-keyboard-swing/fx-onscreen-keyboard-swing-8.2.6-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/comtel2000/fx-onscreen-keyboard-swing/8.2.6-SNAPSHOT/fx-onscreen-keyboard-swing-8.2.6-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

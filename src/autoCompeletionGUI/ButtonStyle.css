@@ -1,0 +1,32 @@
+/*@font-face {
+	font-family: FontKeyboardFX;
+	src: url('../font/FontKeyboardFX.ttf');
+}*/
+
+Button {
+    -fx-background-color: black;
+    -fx-background-radius: 0;
+    -fx-focus-traversable: false;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 0;
+    -fx-padding: 5;
+    -fx-vgap: 2.5;
+    -fx-hgap: 2.5;
+    -fx-font-weight: bold;
+    -fx-font-family: "sans-serif";
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+    -fx-background-color: black;
+    -fx-border-width: 0;
+    -fx-label-padding: -10;
+}
+
+Button:hover {
+    -fx-background-color: #646a78;
+}
+
+Button:pressed {
+    -fx-background-color: #303030;
+}
+

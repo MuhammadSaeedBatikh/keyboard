@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="95.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeScreen.PickSettingsController">
+    <children>
+        <ImageView fx:id="backspace" fitHeight="100.0" fitWidth="100.0" layoutX="440.0" layoutY="27.0" onMouseClicked="#backspaceClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/keys/backspace.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="enter" fitHeight="100.0" fitWidth="100.0" layoutX="305.0" layoutY="27.0" onMouseClicked="#enterClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/keys/enter.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="shift" fitHeight="100.0" fitWidth="100.0" layoutX="163.0" layoutY="27.0" onMouseClicked="#shiftClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/keys/Shift.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="space" fitHeight="100.0" fitWidth="100.0" layoutX="26.0" layoutY="21.0" onMouseClicked="#spaceBarClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/keys/space.png" />
+            </image>
+        </ImageView>
+    </children>
+</Pane>

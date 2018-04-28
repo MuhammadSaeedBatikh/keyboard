@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="commons-lang3-3.6 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/commons-lang3-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/LeapJava.jar!/" />
+      <root url="jar://$PROJECT_DIR$/weka.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

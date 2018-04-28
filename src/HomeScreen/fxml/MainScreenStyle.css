@@ -1,0 +1,15 @@
+/*@font-face {
+	font-family: FontKeyboardFX;
+	src: url('../font/FontKeyboardFX.ttf');
+}*/
+
+
+
+#enterGestureImageView:hover {
+    -fx-background-color: #646a78;
+}
+
+Button:pressed {
+    -fx-background-color: #303030;
+}
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeScreen.SettingsController">
+    <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="447.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/keys/enter.png" />
+    </ImageView>
+    <ImageView fx:id="obliqueOK" fitHeight="100.0" fitWidth="50.0" layoutX="252.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/gestures/ok.jpg" />
+    </ImageView>
+    <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="449.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/keys/backspace.jpg" />
+    </ImageView>
+    <ImageView fx:id="sword" fitHeight="100.0" fitWidth="50.0" layoutX="252.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/gestures/sword.jpg" />
+    </ImageView>
+    <ImageView fitHeight="50.0" fitWidth="200.0" layoutX="446.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/keys/Shift.png" />
+    </ImageView>
+    <ImageView fx:id="claw" fitHeight="100.0" fitWidth="50.0" layoutX="252.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/gestures/claw.jpg" />
+    </ImageView>
+    <ImageView fx:id="horns" fitHeight="100.0" fitWidth="50.0" layoutX="250.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/gestures/horns.jpg" />
+    </ImageView>
+    <ImageView fitHeight="50.0" fitWidth="123.0" layoutX="460.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/keys/space.png" />
+    </ImageView>
+    <Button fx:id="obliqueOKChangeButton" layoutX="30.0" layoutY="147.0" mnemonicParsing="false" onAction="#obliqueOKChange" text="تغيير" />
+    <Button fx:id="swordChangeButton" layoutX="30.0" layoutY="47.0" mnemonicParsing="false" onAction="#swordChange" text="تغيير" />
+    <Button fx:id="clawChangeButton" layoutX="30.0" layoutY="363.0" mnemonicParsing="false" onAction="#clawChange" text="تغيير" />
+    <Button fx:id="hornsChangeButton" layoutX="30.0" layoutY="264.0" mnemonicParsing="false" onAction="#hornsChange" text="تغيير" />
+   <Button fx:id="save" layoutX="493.0" layoutY="465.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="62.0" text="حفظ" />
+   <Button fx:id="close" layoutX="398.0" layoutY="465.0" mnemonicParsing="false" onAction="#closeClicked" prefHeight="25.0" prefWidth="62.0" text="إغلاق" />
+</AnchorPane>
