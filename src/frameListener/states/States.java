@@ -103,8 +103,14 @@ public class States {
                     System.out.println("maxClassifiedLetter = " + maxClassifiedLetter);
                     performCurrFrame = 0;
                     StatesManager.setCurrentState(StatesManager.STATES.WANT_ANOTHER_ACTION);
-
-                    if (!maxClassifiedLetter.equalsIgnoreCase("horns")) {
+                    boolean isNumber = screenWriter.getAction(maxClassifiedLetter) == null;
+                    System.out.println("get action " + screenWriter.getAction(maxClassifiedLetter) + "  action: " + maxClassifiedLetter);
+                    System.out.println("isNumber = " + isNumber);
+                    boolean deleteAction = false;
+                    if (!isNumber) {
+                        deleteAction = screenWriter.getAction(maxClassifiedLetter).equalsIgnoreCase("delete");
+                    }
+                    if (isNumber) {
                         int buttonNumber = Integer.valueOf(maxClassifiedLetter);
                         String chosenWord = suggestedList.get(5 - buttonNumber);
                         String[] chunck = InputAnalyzerAPI.chunkInput(writtenPart);
@@ -121,7 +127,6 @@ public class States {
                             String chosWrord = split[split.length - 1];
                             String previousWord = split[split.length - 2];
                             try {
-                                System.out.println("user chose word  " + chosenWord + " " + previousWord);
                                 InputAnalyzerAPI.userChooseWord(chosWrord, previousWord);
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -132,13 +137,24 @@ public class States {
                         AutoCompletionMain.clickedButton = buttonNumber;
                         AutoCompletionMain.performAction = true;
                         System.out.println("writtenPart = " + writtenPart);
-                    } else {
+                    } else if (deleteAction) {
                         screenWriter.deleteLetter();
                         writtenPart.setLength(writtenPart.length() - 1);
                         System.out.println("writtenPart after deletion = " + writtenPart);
                         suggestedList = InputAnalyzerAPI.inputAnalyzer(writtenPart.toString());
                         AutoCompletionMain.suggestedList = suggestedList;
                         AutoCompletionMain.changeList = true;
+                    } else {
+                        screenWriter.performKeyboardAction(maxClassifiedLetter);
+                        String action = screenWriter.getAction(maxClassifiedLetter);
+                        if (action.equalsIgnoreCase("enter")||action.equalsIgnoreCase("space")){
+                            suggestedList = InputAnalyzerAPI.inputAnalyzer(writtenPart.toString());
+                            AutoCompletionMain.suggestedList = suggestedList;
+                            AutoCompletionMain.changeList = true;
+                        }
+                        if (action.equalsIgnoreCase("shift")){
+                            screenWriter.clickShift();
+                        }
                     }
                 }
             }

@@ -105,7 +105,6 @@ public class AutoCompletionMain extends Application {
         //                 1    2   3    4   5     6    7    8    9    10  11  12    13    14   15   16   17  18         19         20  21   22   23   24   25  26  27  28
         String alphabetClasses = "alph,baa,taa,thaa,geem,hhaa,khaa,daal,tzaal,raa,zaay,seen,sheen,saad,daad,ttaa,zaa,ayin,faa,qaaf,kaaf,laam,meem,noon,haa,wau,yaa,gheenToBeDeleted";
 
-
         String optionsClasses = "1,2,0,3,4,5,horns,OK,gun,yaa_horns";
         String alphabetModelPath = "alphabet-svm-cross12.model";
         String optionsModelPath = "options SMO.model";

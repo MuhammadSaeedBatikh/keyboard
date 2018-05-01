@@ -17,8 +17,9 @@ public class ScreenWriter {
 
     String[] letters = {"ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"};
     String[] options = {"1", "2", "3", "4", "5", "sword"};//right the rest here
-    String[] settings = {"enter", "delete", "shift", "space"};
-    String[] settingsSign = {"obliqueOK", "sword", "claw", "horns"};
+    String[] settings = {"enter", "shift", "delete", "space"};
+    String[] settingsSign = {"horns", "OK", "gun", "yaa_horns"};
+    boolean shiftPressed;
 
     public ScreenWriter() throws AWTException {
         String alphabetClasses = "alph,baa,taa,thaa,geem,hhaa,khaa,daal,tzaal,raa,zaay,seen,sheen,saad,daad,ttaa,zaa,ayin,gheenToBeDeleted,faa,qaaf,kaaf,laam,meem,noon,haa,wau,yaa";
@@ -48,7 +49,7 @@ public class ScreenWriter {
         boolean pressSpace = false;
         String letter = lettersMap.get(c);
         if (letter == null) {
-            letter = c ;
+            letter = c;
             pressSpace = true;
         }
         StringSelection selection = new StringSelection(letter);
@@ -58,10 +59,11 @@ public class ScreenWriter {
         this.robot.keyPress(KeyEvent.VK_V);
         this.robot.keyRelease(KeyEvent.VK_V);
         this.robot.keyRelease(KeyEvent.VK_CONTROL);
-        if (pressSpace){
+        if (pressSpace) {
             clickSpace();
         }
         this.robot.delay(10);
+        releaseShift();
     }
 
     public void deleteLetter() {
@@ -69,6 +71,7 @@ public class ScreenWriter {
         robot.keyPress(KeyEvent.VK_BACK_SPACE);
         robot.keyRelease(KeyEvent.VK_BACK_SPACE);
         robot.keyRelease(KeyEvent.VK_SHIFT);
+        releaseShift();
     }
 
     public void deleteMultipleLetters(int num) {
@@ -79,13 +82,31 @@ public class ScreenWriter {
     }
 
     public void clickEnter() {
+        releaseShift();
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
     }
 
     public void clickSpace() {
+        releaseShift();
         robot.keyPress(KeyEvent.VK_SPACE);
         robot.keyRelease(KeyEvent.VK_SPACE);
+    }
+
+    public String getAction(String sign) {
+        return settingsMap.get(sign);
+    }
+
+    public void clickShift() {
+        robot.keyPress(KeyEvent.VK_SHIFT);
+        shiftPressed = true;
+    }
+
+    public void releaseShift() {
+        if (shiftPressed) {
+            robot.keyRelease(KeyEvent.VK_SHIFT);
+        }
+        shiftPressed = false;
     }
 
     public void performKeyboardAction(String sign) {
@@ -100,6 +121,9 @@ public class ScreenWriter {
                 break;
             case "space":
                 clickSpace();
+                break;
+            case "shift":
+                clickShift();
                 break;
         }
     }
